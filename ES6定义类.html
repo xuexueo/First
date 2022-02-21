@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function User(name,pwd){
+            console.log('this',this)
+            this.name=name;
+            this.pwd=pwd;
+        }
+
+        //使用prototype扩展一些方法
+        User.prototype.tostring=function(){
+            return this.username+this.password;
+        }
+
+        //使用类，通过new实例化
+        let user =new User('张三','8888');
+        console.log(user.name,user.pwd)
+
+        class Person{
+            constructor(name,pwd){
+                this.name=name;
+                this.pwd=pwd
+            }
+            tostring(){
+                return +this.name+this.pwd;
+            }
+
+        }
+        let 
+    </script>
+</body>
+</html>

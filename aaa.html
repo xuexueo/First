@@ -1,0 +1,64 @@
+<!-- 感叹号加TAB可以快速生成头文件 -->
+<!-- 添加插件open in browser -->
+<!-- 文件、首选项、设置、afterdelay -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>ES6的语法：作用域</title>
+</head>
+<body>
+    <script>
+        //ES5 var function
+        //ES6 let for
+        if(1==1){
+            var a=1;
+        }
+        console.log(a);
+
+
+        function b(){
+            var bb=1;
+        }
+
+        // console.log(bb);
+
+
+        if(1==1){
+            let c =1;
+        }
+        // console.log(c)
+
+        //先输出，再定义，会出现undefined
+        console.log(d);
+        var d =100;
+        //ES6不允许变量提升
+        // console.log(e);
+        // let e =200;
+
+        //ES5不允许重复
+        var f =1;
+        var f=2;
+        console.log(f);
+
+        //ES6允许重复
+        // let g=10;
+        // let g =20;
+        // console.log(g)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

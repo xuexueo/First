@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(a,b){
+            return a+b;
+        }
+        console.log('普通函数调用,',sum(20,10))
+
+        let a=function(a,b){
+            return a+b;
+        }
+        console.log('对象函数调用',a(20,10))
+
+        //2.箭头函数
+        
+        let sum3=(a,b)=>{
+            return a+b;
+        }
+        console.log("箭头函数",sum3(20,10))
+
+        //一个参数，省略小括号
+        let test=(a)=>{
+            return a+100;
+        }
+
+        let test2=a=>{
+            return a+100
+        }
+
+        console.log('一个参数',test2(1));
+        //2.2函数中只有一条语句
+        //debug
+        let test3=(a,b)=>a+b;
+        console.log('简洁写法',test3(20,10))
+
+
+        //应用
+        let name='张三';
+        let person={
+            name:name,
+            age:18,
+            play:function(){
+                console.log(this);
+            },
+            play2(){
+                console.log("掌声")
+            },
+            play3:()=>{
+                console.log(this);
+            }
+        }
+        person.play();
+        person.play3();
+    </script>
+</body>
+</html>
